@@ -4,7 +4,7 @@ import { products } from "../data/products";
 export default function ProductList() {
   return (
     <>
-      <h2>ProductList</h2>
+      <h2 className="my-8">ProductList</h2>
       <ul>
         {products.map((product) => {
           return <ProductCard product={product} />;

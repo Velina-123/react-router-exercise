@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import ProductDetails from "../pages/ProductDetails";
 import ProductList from "../pages/ProductList";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         path: "products/:productId",
         element: <ProductDetails />,
       },
+      {
+        path: "*",
+        element: <NotFoundPage />,
+      }
     ],
   },
 ]);
