@@ -8,12 +8,11 @@ export default function ProductDetails() {
   const { productId } = useParams<string>();
 
   const product: Product | undefined = products.find((item)=>item.id===Number(productId))
-
   if(!product) {
     return <div>Der Produkt wurde nicht gefunden</div>;
   }
 
-  return (<article>
+  return (<article key={product.id}>
 
   <h3 className="text-3xl font-bold my-8">ProductDetails</h3>
 
